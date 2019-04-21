@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <style>
+#main
+{
+  background-color:#ADD8E6;
+  height:450px;
+}
+@media only screen and (max-width: 1000px) 
+{
+  #main{height:1000px;}
+}
+.fa-paper-plane-o
+{
+  font-weight: lighter;
+}
+.fbtn button
+{
+  border-radius:2rem;
+  margin: 20px;
+  padding:10px;
+  border:none; 
+  font:bolder 16px Hammersmith One; 
+  width:250px;
+  cursor: pointer;
+  height:60px;
+}
+.fbtn .b1
+{
+  background-color:#ffffff;
+  color:#ed1a92;
+}
+.fbtn .b1:hover {
+  -webkit-filter: blur(0.75px);
+  -moz-filter: all .5s ease;
+  -o-filter: all .5s ease;
+  -ms-filter: all .5s ease;
+  filter: blur(0.75px);0
+}
+.fa-share-alt
+{
+   font-size: 12px;
+   margin-right:15px;
+   font-weight: bolder;
+}
+.fbtn .b2
+{
+  background-color:#ed1a92;
+  color:white;
+   box-shadow: inset 0 0 0 0 #ffffff;
+  -webkit-transition: ease-out 1s;
+  -moz-transition: ease-out 1s;
+  transition: ease-out 1s;
+}
+.fbtn .b2:hover
+{
+  box-shadow: inset 250px 0 0 0 #ffffff;
+  color:#ed1a92;
+}
+.form-inline button
+{ 
+  font-size:25px;
+  background-color:#ed1a92;
+  width: 60px;
+  height:60px;
+  border: none;
+  padding:9px;
+  border-radius: 2rem;
+  color:white;
+}
+.form-inline button:hover
+{
+  background-color:#ffffff;
+  color:#002f84;
+ }
+#footer1
+{
+  font:normal 900 22px Hammersmith One, sans-serif;
+  margin-top:55px; 
+  color:#002f84;
+  text-align: center;
+}
+#footer2
+{
+  font:normal 22px  Hammersmith One, sans-serif;
+ text-align: right;
+ opacity:0.7;
+ color:#002f84;
+}
+.img
+{
+  width:140px;
+  height:88px;
+}
+.txt a
+{
+  font:normal bolder 16px Hammersmith One, sans-serif;
+  color:#ed1a92;
+  margin-top:2px;
+  position:relative ;
+  text-decoration:none;
+}
+ .txt a::after {    
+ background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0%;
+  position: absolute;
+  background: #ed1a92;
+  opacity:0.3;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.txt a:first-child:hover::after { 
+  width: 135px; 
+  left: 0; 
+}
+.txt a:last-child:hover::after { 
+  width: 110px; 
+  left: 0; 
+}
+.options a
+{
+  color:#002f84;
+  text-decoration:none;
+  font:16px Hammersmith One;
+}
+.options a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0%;
+  background: #002f84;
+  opacity:0.3;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  text-decoration: none;
+}
+#col21:hover::after { 
+  width: 105px; 
+  left: 0; 
+}
+#col22:hover::after { 
+  width: 68px; 
+  left: 0; 
+}
+#col23:hover::after { 
+  width: 85px; 
+  left: 0; 
+}
+#col24:hover::after { 
+  width: 95px; 
+  left: 0; 
+}
+#col25:hover::after { 
+  width: 23px; 
+  left: 0; 
+}
+.mail
+{
+  border-radius: 2rem;
+  margin-right:-10px;
+  width:250px;
+  height:60px;
+  font-family: Hammersmith One;
+  border:none;
+  text-align: left;
+  padding:15px;
+  color:gray;
+}
+input {
+    font-size: 15px;
+    text-align: center;
+    border: 5px solid rgba(0, 0, 0, .3);
+}
+.message {
+    font: 12px Hammersmith One;
+    display: none;
+    width: 100%;
+    padding-left:70px;
+    padding-top:0px;
+}
+
+.error {color: red;}
+.success{color: green;}
+.blank{  color:red;}
+.sub{
+  background-color:#ADD8E6;
+  display:none;
+  color:#ed1a92;
+  font-size:45px;
+  font-family:Hammersmith One;
+}
+      </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <p id="footer1">Sign Up for Newsletter</p>
+              <br>
+                <div class="row justify-content-center align-items-center col1">
+                 
+                <div class="form-inline frm">
+                  <input type="email" class="mail" placeholder="E-Mail" required />
+                    <button type="submit">
+                      <i class="fa fa-paper-plane-o" ></i>
+                    </button>
+                  </div>
+                   <div class="sub">
+                    THANK YOU!
+                  </div> 
+                </div>
+                 <span class="message success">E-MAIL VALID.</span>
+                  <span class="message error">E-MAIL INVALID</span>
+                  <span class="message blank">E-MAIL REQUIRED</span>
+              </div>
+            <div class="col-lg-4">
+              <p id="footer1">
+                <b>Follow Us</b><br></p>
+                <div style="text-align: center" class="fbtn">
+                  <button type="button" class="btn btn-primary b1">
+                    <i class="fa fa-share-alt"></i>
+                  Share
+                  </button>
+               </div>
+             </div>
+            <div class="col-lg-4">
+              <p id="footer1">
+                <b>Support Us</b><br></p>
+                <div style="text-align: center" class="fbtn">
+               <button type="button" class="btn btn-primary b2"><b>Donate</b></button></div>
+               <div style="text-align: center" class="txt">
+                  <a href="#">Online Fundraising</a><br>
+                  <a href="#">Benefit Events</a>
+                </div>
+            </div>
+          </div>
+          <br><br>
+      <hr style="border:2px solid #b1c9e2;">
+      <div id="column-2" class="container-fluid">
+        <div class="row options">
+          <div class="col-lg-2">
+            <img src="aafoundationindia_logo.png" class="img">
+          </div>
+          <div class="col-lg-2">
+            <a href="#" id="col21" >The Foundation</a>
+          </div>
+           <div class="col-lg-2">
+            <a href="#" id="col22">About Us</a>
+          </div>
+           <div class="col-lg-2">
+            <a href="#" id="col23">Our Mission</a>
+          </div>
+           <div class="col-lg-2">
+            <a href="#" id="col24">Get Involved</a>
+          </div>
+           <div class="col-lg-2">
+            <a href="#" id="col25">ABC</a></div></div></div></div></div>
+  <script>
+    $(function(){
+      var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+        $('[type="email"]').on('keyup', function() {
+      $('.message').hide();
+    regExp.test( $(this).val() ) ? $('.message.success').show() : $('.message.error').show();
+  });
+});
+  </script>
+  <script>
+  $(document).ready(function(){
+    $(".form-inline button").click(function(){
+      var a=$(".mail").val();
+      if(a=="")
+       $(".blank").show();
+      else
+      {
+      $(".frm").remove(".form-inline");
+      $(".success").hide();
+      $(".error").hide();
+      $(".sub").fadeIn(4000);
+    }
+    });
+  });
+</script>
+ </body>
+</html>
